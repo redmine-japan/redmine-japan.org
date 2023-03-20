@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-admin/
+
+Sitemap: https://redmine-japan.org/sitemap.xml
+Sitemap: https://redmine-japan.org/sitemap.rss
+
