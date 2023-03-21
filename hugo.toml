@@ -1,0 +1,4 @@
+baseURL = 'https://redmine-japan.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = 'redmine-japan_vol-3'
