@@ -4,3 +4,7 @@ title = 'My New Hugo Site'
 theme = 'redmine-japan'
 relativeurls = true
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      hardWraps = true

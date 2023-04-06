@@ -27,17 +27,23 @@
         <div class="col-lg-12 mb-4 mt-2 text-center">
           <h2 class="mb-2">基調講演</h2>
         </div>
-      </div>		  
+      </div>
+      {{ $headless := .Site.GetPage "/speakers" }}
+      {{ $contents := $headless.Resources.Match "*.md" }}
+      {{ range $contents }}
       <div class="row speaker">   
+          {{ $photo := $headless.Resources.GetMatch .Params.Photo }}
           <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 text-center">
-            <img class="rounded" alt="YesNoBut株式会社　代表取締役・アギレルゴコンサルティング株式会社　シニアアジャイルコーチ　川口 恭伸氏" src="/images/redminejapan_speakers1.jpg" data-holder-rendered="true">
+            <img class="rounded" alt="{{ .Params.Alt }}" src="{{ $photo.RelPermalink }}" data-holder-rendered="true">
           </div>
           <div class="col-xl-7 col-lg-6 col-md-6 col-sm-12 text-left">
-            <h3 style="line-height:2;">川口 恭伸（かわぐち　やすのぶ）氏</h3>
-            <p class="speaker_text text-blue">
-            YesNoBut株式会社　代表取締役<br>アギレルゴコンサルティング株式会社　シニアアジャイルコーチ<br>北陸先端科学技術大学院大学修了ののち、金融情報サービスベンダー(株)QUICKにてデータメンテナンス/システム開発、プロダクト/サービス企画開発、仮想化インフラ構築などを担当。2008年スクラムに出会い、パイロットプロジェクトを始める。<br>2011年イノベーションスプリント実行委員長、2011年からスクラムギャザリング東京実行委員。2012-2018年楽天にてアジャイルコーチ。楽天テクノロジーカンファレンス2012-2017実行委員。2021-2022年ホロラボにてシニアアジャイルコーチ。<br>「Fearless Change」「ユーザーストーリーマッピング」監訳、「Joy, inc」「ScrumMaster the Book」共訳、「アジャイルエンタープライズ」監修。認定スクラムプロフェッショナル。ジム・コプリエン、ジェフ・パットン、ミッチ・レイシーなど、認定スクラムトレーニングの運営・共同講師経験多数。</p>
+            <h3 style="line-height:2;">{{ .Title }}</h3>
+            <div class="speaker_text text-blue">
+              {{ .Content }}
+            </div>
           </div>
       </div>
+      {{ end }}
     </div>
   </div>
 </section>
