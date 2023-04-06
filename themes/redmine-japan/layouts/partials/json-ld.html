@@ -1,0 +1,75 @@
+<script type="application/ld+json" class="aioseo-schema">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ .Site.BaseURL }}#website",
+      "url": "{{ .Site.BaseURL }}",
+      "name": "Redmine Japan",
+      "description": "{{ .Site.Params.description }}",
+      "inLanguage": "{{ .Site.LanguageCode }}",
+      "publisher": {
+        "@id": "{{ .Site.BaseURL }}#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "{{ .Site.BaseURL }}?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "{{ .Site.BaseURL }}#organization",
+      "name": "Redmine Japan",
+      "url": "{{ .Site.BaseURL }}",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "{{ .Site.BaseURL }}#organizationLogo",
+        "url": "{{ .Site.BaseURL }}wp-content/themes/redmine-japan_vol-2/images/redminejapan_logo_vol02.svg"
+      },
+      "image": {
+        "@id": "{{ .Site.BaseURL }}#organizationLogo"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ .Site.BaseURL }}#breadcrumblist",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "@id": "{{ .Site.BaseURL }}#listItem",
+          "position": 1,
+          "item": {
+            "@type": "WebPage",
+            "@id": "{{ .Site.BaseURL }}",
+            "name": "ホーム",
+            "description": "{{ .Site.Params.description }}",
+            "url": "{{ .Site.BaseURL }}"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "{{ .Site.BaseURL }}#collectionpage",
+      "url": "{{ .Site.BaseURL }}",
+      "name": "{{ .Site.Title }}",
+      "description": "{{ .Site.Params.description }}",
+      "inLanguage": "{{ .Site.LanguageCode }}",
+      "isPartOf": {
+        "@id": "{{ .Site.BaseURL }}#website"
+      },
+      "breadcrumb": {
+        "@id": "{{ .Site.BaseURL }}#breadcrumblist"
+      },
+      "about": {
+        "@id": "{{ .Site.BaseURL }}#organization"
+      }
+    }
+  ]
+}
+</script>

@@ -1,8 +1,11 @@
 baseURL = 'https://redmine-japan.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+languageCode = 'ja'
+title = 'Redmine Japan - Redmine Japan Vol.3'
 theme = 'redmine-japan'
 relativeurls = true
+
+[params]
+  description = 'Redmine Japan Vol.3'
 
 [markup]
   [markup.goldmark]

@@ -1,0 +1,14 @@
+<title>{{ .Site.Title }}</title>
+<meta name="description" content="{{ .Site.Params.description }}" />
+<meta name="robots" content="max-image-preview:large" />
+<link rel="canonical" href="{{ .Site.BaseURL }}" />
+<meta property="og:locale" content="ja_JP" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ .Site.Title }}" />
+<meta property="og:description" content="{{ .Site.Params.description }}" />
+<meta property="og:url" content="{{ .Site.BaseURL }}" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ .Site.Title }}" />
+<meta name="twitter:description" content="{{ .Site.Params.description }}" />
+{{ partial "json-ld.html" . }}
