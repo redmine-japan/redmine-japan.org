@@ -45,47 +45,11 @@ img.emoji {
       <link rel="apple-touch-icon" href="/vol-3/images/cropped-Redmine-Japan-Vol.3_icon-180x180.png" />
       <meta name="msapplication-TileImage" content="/vol-3/images/cropped-Redmine-Japan-Vol.3_icon-270x270.png" />
 
-      <meta name="google-site-verification" content="La2iUx1CTFy4uu_z1s_CEWkHB9JuL4owdPQOJe2BreU" />
-
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45901614-10"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-45901614-10');
-      </script>
-
-      <!-- Global site tag (gtag.js) - Google Ads: 10840485180 -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10840485180"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'AW-10840485180');
-      </script>
-
-      <!-- Event snippet for 申込クリック conversion page
-        In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-        <script>
-          function gtag_report_conversion(url) {
-                      var callback = function () {
-                                  if (typeof(url) != 'undefined') {
-                                              window.location = url;
-                                            }
-                                };
-                      gtag('event', 'conversion', {
-                                  'send_to': 'AW-10840485180/718dCOSIkZEDELzakrEo',
-                                  'event_callback': callback
-                                });
-                      return false;
-                    }
-        </script>	  
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Redmine Japan - Redmine Japan Vol.3" />
-        <meta name="twitter:description" content="Redmine Japanは、 オープンソースの無料利用できるプロジェクト管理ツール 『Redmine』に関するカンファレンスイベントになります。" />
-        <!--   <meta name="twitter:image" content="https://redmine-japan.org/vol-2/wp-content/uploads/sites/3/2022/02/redmine-japan_vol02_1000.png" /> -->
+      {{ partial "gtag.html" . }}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Redmine Japan - Redmine Japan Vol.3" />
+      <meta name="twitter:description" content="Redmine Japanは、 オープンソースの無料利用できるプロジェクト管理ツール 『Redmine』に関するカンファレンスイベントになります。" />
+      <!--   <meta name="twitter:image" content="https://redmine-japan.org/vol-2/wp-content/uploads/sites/3/2022/02/redmine-japan_vol02_1000.png" /> -->
   </head>
   <body>
     {{ partial "header/site-header.html" . }}

@@ -6,6 +6,10 @@ relativeurls = true
 
 [params]
   description = 'Redmine Japan Vol.3'
+  google_site_verification = 'La2iUx1CTFy4uu_z1s_CEWkHB9JuL4owdPQOJe2BreU'
+  googletagmanager_id = 'UA-45901614-10'
+  googleads_id = '10840485180'
+  conversion   = '718dCOSIkZEDELzakrEo'
 
 [markup]
   [markup.goldmark]

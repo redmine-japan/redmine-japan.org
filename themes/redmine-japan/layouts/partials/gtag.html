@@ -1,0 +1,38 @@
+<meta name="google-site-verification" content="{{ .Site.Params.google_site_verification }}" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googletagmanager_id }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ .Site.Params.googletagmanager_id }}');
+</script>
+
+<!-- Global site tag (gtag.js) - Google Ads: {{ .Site.Params.googleads_id }} -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-{{ .Site.Params.googleads_id }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-{{ .Site.Params.googleads_id }}');
+</script>
+
+<!-- Event snippet for 申込クリック conversion page
+  In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+      'send_to': 'AW-{{ .Site.Params.googleads_id }}/{{ .Site.Params.conversion }}',
+      'event_callback': callback
+    });
+    return false;
+  }
+</script>
+
