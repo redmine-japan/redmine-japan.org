@@ -1,6 +1,8 @@
 baseURL = 'https://redmine-japan.org/'
 languageCode = 'ja'
-title = 'Redmine Japan - Redmine Japan Vol.3'
+title = 'Redmine Japan'
+copyright = 'Copyright © Redmine Japan Vol.3. All rights reserved'
+
 theme = 'redmine-japan'
 relativeurls = true
 
@@ -15,7 +17,8 @@ relativeurls = true
   weight = 2
 
 [params]
-  description = 'Redmine Japan Vol.3'
+  subtitle = 'Redmine Japan Vol.3'
+  description = 'Redmine Japanは、 オープンソースの無料利用できるプロジェクト管理ツール 『Redmine』に関するカンファレンスイベントになります。'
   google_site_verification = 'La2iUx1CTFy4uu_z1s_CEWkHB9JuL4owdPQOJe2BreU'
   googletagmanager_id = 'UA-45901614-10'
   googleads_id = '10840485180'
