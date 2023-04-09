@@ -2,13 +2,17 @@
 <meta name="description" content="{{ .Site.Params.description }}" />
 <meta name="robots" content="max-image-preview:large" />
 <link rel="canonical" href="{{ .Site.BaseURL }}" />
+
 <meta property="og:locale" content="ja_JP" />
 <meta property="og:site_name" content="{{ .Site.Title }} - {{ .Site.Params.subtitle }}" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="{{ .Site.Title }} - {{ .Site.Params.subtitle }}" />
 <meta property="og:description" content="{{ .Site.Params.description }}" />
 <meta property="og:url" content="{{ .Site.BaseURL }}" />
+
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="{{ .Site.Title }} - {{ .Site.Params.subtitle }}" />
 <meta name="twitter:description" content="{{ .Site.Params.description }}" />
+<!--   <meta name="twitter:image" content="https://redmine-japan.org/vol-2/wp-content/uploads/sites/3/2022/02/redmine-japan_vol02_1000.png" /> -->
+
 {{ partial "json-ld.html" . }}
