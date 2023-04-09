@@ -4,6 +4,16 @@ title = 'Redmine Japan - Redmine Japan Vol.3'
 theme = 'redmine-japan'
 relativeurls = true
 
+[menu]
+[[menu.main]]
+  name = '基調講演'
+  url  = '/#speakers'
+  weight = 1
+[[menu.main]]
+  name = 'スポンサー'
+  url  = '/#sponsors'
+  weight = 2
+
 [params]
   description = 'Redmine Japan Vol.3'
   google_site_verification = 'La2iUx1CTFy4uu_z1s_CEWkHB9JuL4owdPQOJe2BreU'
