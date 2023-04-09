@@ -7,7 +7,10 @@
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet"  href="/vol-3/css/style.css?1678245475" type="text/css">
+
+    {{ $style := resources.Get "vol-3/css/style.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" type="text/css">
+
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
     <script src="https://kit.fontawesome.com/56e12542fc.js" crossorigin="anonymous"></script>
 
@@ -28,10 +31,6 @@
     <meta name="msapplication-TileImage" content="/vol-3/images/cropped-Redmine-Japan-Vol.3_icon-270x270.png" />
 
     {{ partial "gtag.html" . }}
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Redmine Japan - Redmine Japan Vol.3" />
-    <meta name="twitter:description" content="Redmine Japanは、 オープンソースの無料利用できるプロジェクト管理ツール 『Redmine』に関するカンファレンスイベントになります。" />
-    <!--   <meta name="twitter:image" content="https://redmine-japan.org/vol-2/wp-content/uploads/sites/3/2022/02/redmine-japan_vol02_1000.png" /> -->
   </head>
   <body>
     {{ partial "header/site-header.html" . }}

@@ -29,7 +29,7 @@
       "logo": {
         "@type": "ImageObject",
         "@id": "{{ .Site.BaseURL }}#organizationLogo",
-        "url": "{{ .Site.BaseURL }}wp-content/themes/redmine-japan_vol-2/images/redminejapan_logo_vol02.svg"
+        "url": "{{ .Site.BaseURL }}vol-3/images/redminejapan_logo_vol03.svg"
       },
       "image": {
         "@id": "{{ .Site.BaseURL }}#organizationLogo"
@@ -57,7 +57,7 @@
       "@type": "CollectionPage",
       "@id": "{{ .Site.BaseURL }}#collectionpage",
       "url": "{{ .Site.BaseURL }}",
-      "name": "{{ .Site.Title }}",
+      "name": "{{ .Site.Title }} - {{ .Site.Params.subtitle }}",
       "description": "{{ .Site.Params.description }}",
       "inLanguage": "{{ .Site.LanguageCode }}",
       "isPartOf": {
