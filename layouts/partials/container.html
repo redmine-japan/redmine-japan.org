@@ -1,20 +1,28 @@
 <section>
-  <div id="{{ .Params.identifiers }}" class="jumbotron">
-    {{ if .Title }}
+  <div id="{{ .identifier }}" class="jumbotron">
+    {{ with .context.Title }}
     <div class="container">
       <div class="row">
         <div class="col-lg-12 mb-4 mt-2 text-center">
-          <h2>{{ .Title }}</h2>
+          <h2>{{ . }}</h2>
         </div>
       </div>
     </div>
     {{ end }}
 
     <div class="container">
-      <div class="row">
-        {{ block "main" . }}
+      {{ $partial  := .identifier | printf "%s.html" }}
+      {{ if .context.Params.pattern }}
+        {{ $contents := .context.Resources.Match .context.Params.pattern }}
+        {{ $parent := .context }}
+        {{ range $contents }}
+          {{ partial $partial (dict "context" . "parent" $parent) }}
         {{ end }}
+      {{ else }}
+      <div class="row">
+        {{ partial $partial .context }}
       </div>
+      {{ end }}
     </div>
   </div>
 </section>
