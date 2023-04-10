@@ -1,0 +1,11 @@
+{{ $images := .Resources.Match "*.png" }}
+{{ range sort $images "Params.weight" }}
+<div class="col-sm-6">
+  <a href="{{ .Params.href }}" class="card" target="_blank">
+    <div class="card-body text-center">
+      <h5 class="card-title">{{ .Title }}</h5>
+      <img src="{{ .RelPermalink }}" class="rounded">
+    </div>
+  </a>
+</div>
+{{ end }}

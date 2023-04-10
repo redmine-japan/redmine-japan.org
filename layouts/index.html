@@ -12,14 +12,13 @@
             <p class="main_entry">
             </p>
           </div>
-          <p class="text-center text-blue last_year">昨年度の開催内容はこちら　→　<a href="/vol-2/" target="_blank">Redmine Japan vol.2</a></p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-{{ $blocks := slice "speakers" "access" "sponsors" "contact" "twitter" }}
+{{ $blocks := slice "speakers" "access" "sponsors" "contact" "twitter" "past" }}
 {{ range $blocks }}
   {{ $path := . | printf "/%s" }}
   {{ $context := $.Site.GetPage $path }}

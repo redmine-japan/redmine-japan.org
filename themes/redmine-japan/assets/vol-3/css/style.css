@@ -1302,6 +1302,19 @@ a.entry {
     padding-right: 0;
 }
 
+/* 過去の Redmine Japan */
+#past.jumbotron a {
+  text-decoration: none
+}
+
+#past.jumbotron a:hover {
+  opacity: 0.8
+}
+
+#past.jumbotron img {
+  max-width: 400px;
+  max-height:auto
+}
 
 #bnr .official-bnr img{
 	width: 100%;
