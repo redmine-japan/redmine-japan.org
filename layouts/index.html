@@ -7,44 +7,23 @@
           <h1 class="text-center"><img class="main_typo" src="/vol-3/images/redminejapan_typo_vol03logo.png" alt="Redmine Japan Vol.3"/></h1>
           <h2 class="text-center text-white main_subttl">明日の仕事を変えるために必要なモノ</h2> 
           <p class="text-center text-white main_date">2023. 7. 7 FRI<br><!--AM10:00 start<br><span class="open-time">［AM9:00 Open］</span><br>-->
-          <span><small>オフライン開催決定！<br>＠タワーホール船堀</small></span><br><br><span class="text-info">coming soon</span></p> 
+          <span><small>オフライン開催決定！<br>＠タワーホール船堀</small></span>
           <div class="text-center text-lg-center d-none">
             <p class="main_entry">
-            <span>Coming Soon</span>
             </p>
           </div>
-          <p class="text-center text-blue last_year">昨年度の開催内容はこちら　→　<a href="/vol-2/" target="_blank">Redmine Japan vol.2</a></p>		
+          <p class="text-center text-blue last_year">昨年度の開催内容はこちら　→　<a href="/vol-2/" target="_blank">Redmine Japan vol.2</a></p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section>
-  {{ partial "section/speaker-list.html" . }}
-</section>
+{{ $blocks := slice "speakers" "access" "sponsors" "contact" "twitter" }}
+{{ range $blocks }}
+  {{ $path := . | printf "/%s" }}
+  {{ $context := $.Site.GetPage $path }}
+  {{ partial "container.html" (dict "identifier" . "context" $context) }}
+{{ end }}
 
-<section>
-  <div id="sponsors" class="jumbotron">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 mb-4 mt-2 text-center">
-          <h2>スポンサー</h2>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="text-center col-md-10 col-12 mx-auto">
-          <h3>スポンサー募集中</h3>  
-          <p class="sponsors_details">
-          <a class="sponsors_details_link" href="/pdf/redminejapan_sponsors_vol-3.pdf"  target=”_blank”>Redmine Japanスポンサー募集要項</a></p>
-          <p>スポンサーのお申し込みは、こちらのフォームからお手続きください。</p>
-          <p><a class="sponsor entry" href="https://forms.gle/G3PR8Pb5DUXPvW8dA" target=”_blank”>スポンサーお申し込み</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 {{ end }}

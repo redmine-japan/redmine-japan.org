@@ -1,0 +1,15 @@
+<div class="col-md-12 col-lg-5">
+  <h3>{{ .Params.name }}</h3>
+  <p>{{ .Params.name_en }}</p>
+  <div class="adress">{{ .Params.address }}</div>
+
+  {{ $station := .Resources.GetMatch "station.md" }}
+  {{ $station.Content }}
+
+  {{ $access_note := .Resources.GetMatch "access_note.md" }}
+  {{ $access_note.Content }}
+  <p><a class="btn btn-link" href="{{ .Params.access_url }}" target="_blank">{{ .Params.access_title }} »</a></p>
+</div>
+<div class="col-md-12 col-lg-7 map">
+  <iframe src="https://www.google.com/maps/embed?pb={{ .Params.googlemap }}" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>

@@ -1,0 +1,12 @@
+<div class="text-center col-md-10 col-12 mx-auto">
+{{ if .Params.open }}
+  <h3>スポンサー募集中</h3>
+  <p class="sponsors_details">
+  <a class="sponsors_details_link" href="/pdf/redminejapan_sponsors_vol-3.pdf"  target=”_blank”>Redmine Japanスポンサー募集要項</a></p>
+  <p>スポンサーのお申し込みは、こちらのフォームからお手続きください。</p>
+  <p><a class="sponsor entry" href="https://forms.gle/{{ .Params.form_id }}" target=”_blank”>スポンサーお申し込み</a></p>
+{{ else }}
+  <h3 style="text-decoration: line-through;">スポンサー募集中</h3>
+  <p class="sponsors_details">スポンサー募集は締め切りました<p>
+{{ end }}
+</div>

@@ -12,19 +12,31 @@ relativeurls = true
   url  = '/#speakers'
   weight = 1
 [[menu.main]]
+  name = 'ACCESS'
+  url  = '/#access'
+  weight = 2
+[[menu.main]]
   name = 'スポンサー'
   url  = '/#sponsors'
-  weight = 2
+  weight = 3
+[[menu.main]]
+  name = 'お問い合わせ'
+  url  = '/#contact'
+  weight = 4
 
 [params]
   subtitle = 'Redmine Japan Vol.3'
   description = 'Redmine Japanは、 オープンソースの無料利用できるプロジェクト管理ツール 『Redmine』に関するカンファレンスイベントになります。'
+
   google_site_verification = 'La2iUx1CTFy4uu_z1s_CEWkHB9JuL4owdPQOJe2BreU'
   googletagmanager_id = 'UA-45901614-10'
   googleads_id = '10840485180'
   conversion   = '718dCOSIkZEDELzakrEo'
 
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       hardWraps = true
+    [markup.goldmark.parser.attribute]
+      block = true
