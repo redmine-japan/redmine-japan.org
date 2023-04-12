@@ -1313,7 +1313,8 @@ a.entry {
 
 #past.jumbotron img {
   max-width: 400px;
-  max-height:auto
+  height:auto;
+  width: 100%
 }
 
 #bnr .official-bnr img{
