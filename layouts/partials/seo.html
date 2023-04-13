@@ -1,4 +1,4 @@
-<title>{{ .Site.Title }} - {{ .Site.Params.subtitle }}</title>
+<title> {{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }}{{ end }} - {{ .Site.Params.subtitle }}</title>
 <meta name="description" content="{{ .Site.Params.description }}" />
 <meta name="robots" content="max-image-preview:large" />
 <link rel="canonical" href="{{ .Site.BaseURL }}" />

@@ -30,10 +30,10 @@ nav.navbar-bg{
   background-size: 100% auto;
   padding: 5rem 2rem 2rem;
   border-radius:0;
-	margin-top: -80px;
-    padding-bottom: 80px;
-	min-height: calc(100vh - 150px);
-    max-height: fit-content;
+  margin-top: -80px;
+  padding-bottom: 80px;
+/*  min-height: calc(100vh - 150px);
+    max-height: fit-content; */
 }
 @media (min-width: 1200px) {
 .top_main{
@@ -436,7 +436,7 @@ p.main_entry {
 }
 
 #twitter.jumbotron{
-	background: #2f3f72;
+	background: #6BCACA;
 }
 
 #purpose p{
@@ -1028,7 +1028,7 @@ margin-bottom: 50px;
   line-height: 2;
 }
 #access .access_note{
-    font-size: 1em;
+    font-size: 0.9em;
 }
 #access .map img{
   width: 100%; 
@@ -1302,6 +1302,20 @@ a.entry {
     padding-right: 0;
 }
 
+/* 過去の Redmine Japan */
+#past.jumbotron a {
+  text-decoration: none
+}
+
+#past.jumbotron a:hover {
+  opacity: 0.8
+}
+
+#past.jumbotron img {
+  max-width: 400px;
+  height:auto;
+  width: 100%
+}
 
 #bnr .official-bnr img{
 	width: 100%;
