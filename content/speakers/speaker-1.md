@@ -1,6 +1,6 @@
 ---
 title: 川口 恭伸（かわぐち　やすのぶ）氏
-photo: speaker-1.jpg
+photo: speaker-1.webp
 alt: YesNoBut株式会社　代表取締役・アギレルゴコンサルティング株式会社　シニアアジャイルコーチ　川口 恭伸氏
 ---
 YesNoBut株式会社　代表取締役

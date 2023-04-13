@@ -1,4 +1,4 @@
-{{ $images := .Resources.Match "*.png" }}
+{{ $images := .Resources.Match "*.webp" }}
 {{ range sort $images "Params.weight" }}
 <div class="col-sm-6">
   <a href="{{ .Params.href }}" class="card" target="_blank">
