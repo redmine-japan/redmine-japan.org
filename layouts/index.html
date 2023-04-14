@@ -6,7 +6,7 @@
         <div class="col-12 mainttl">
           {{ $logo := resources.Get "vol-3/images/redminejapan_typo_vol03logo.webp" | resources.Fingerprint }}
           {{ with $logo }}
-          <h1 class="text-center"><img class="main_typo" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="Redmine Japan Vol.3"/></h1>
+          <h1 class="text-center"><img class="main_typo" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="Redmine Japan Vol.3" /></h1>
           {{ end }}
           <h2 class="text-center text-white main_subttl">明日の仕事を変えるために必要なモノ</h2> 
           <p class="text-center text-white main_date">2023. 7. 7 FRI<br><!--AM10:00 start<br><span class="open-time">［AM9:00 Open］</span><br>-->
