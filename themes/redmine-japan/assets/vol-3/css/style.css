@@ -60,6 +60,7 @@ nav.navbar-bg{
 .top_main h1 img.main_typo{
 	max-width: 680px;
 	width: 100%;
+	height: auto
 }
 
 .top_main h2.main_subttl{
