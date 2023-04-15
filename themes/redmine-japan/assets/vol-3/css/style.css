@@ -24,6 +24,9 @@ nav.navbar-bg{
 	background-color: rgba(97,147,175,65%);
 }
 
+svg.logo {
+  fill: #ffcd5a;
+}
 
 .top_main{
   background:url("../images/main_bg_vol3@2x.webp");
