@@ -1,11 +1,11 @@
 {{ define "main" }}
-<div id="anti-harassment" class="jumbotron">
-<div class="container">
-<div class="row">
-<div class="col-12">
-{{ .Content }}
-</div>
-</div>
-</div>
+<div id="{{ .File.ContentBaseName }}" class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
 </div>
 {{ end }}
