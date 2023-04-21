@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 mb-4 mt-2 text-center">
-          <h2>{{ . }}</h2>
+          <h2 class="mb-2">{{ . }}</h2>
         </div>
       </div>
     </div>
@@ -15,7 +15,7 @@
       {{ if .context.Params.pattern }}
         {{ $contents := .context.Resources.Match .context.Params.pattern }}
         {{ $parent := .context }}
-        {{ range $contents }}
+        {{ range sort $contents "Name" }}
           {{ partial $partial (dict "context" . "parent" $parent) }}
         {{ end }}
       {{ else }}
