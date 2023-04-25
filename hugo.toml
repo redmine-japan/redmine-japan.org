@@ -12,21 +12,25 @@ relativeurls = true
   url  = '/#speakers'
   weight = 1
 [[menu.main]]
+  name = 'タイムテーブル'
+  url  = '/timetable'
+  weight = 2
+[[menu.main]]
   name = 'ACCESS'
   url  = '/#access'
-  weight = 2
+  weight = 3
 [[menu.main]]
   name = 'スポンサー'
   url  = '/#sponsors'
-  weight = 3
+  weight = 4
 [[menu.main]]
   name = 'アンチハラスメントポリシー'
   url  = '/policies'
-  weight = 4
+  weight = 5
 [[menu.main]]
   name = 'お問い合わせ'
   url  = '/#contact'
-  weight = 5
+  weight = 6
 
 [params]
   subtitle = 'Redmine Japan Vol.3'

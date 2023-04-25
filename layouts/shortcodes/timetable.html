@@ -1,0 +1,12 @@
+{{ $json := getJSON "https://fortee.jp/flutterkaigi-2022/api/timetable" }}
+
+{{range $json}}
+
+    {{ $c := . }}
+
+    {{range $c}}
+        {{ $d := .}}
+        <div>{{ $d.title }}</div>
+    {{end}}
+
+{{end}}

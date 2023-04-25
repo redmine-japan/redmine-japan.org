@@ -893,7 +893,7 @@ margin-bottom: 50px;
 /*ここまで旧タイムテーブルページ*/
 
 #timetable.jumbotron {
-    background: url(https://redmine-japan.org/wp-content/themes/redmine-japan_vol-2/images/main_bg2021@2x.jpg);
+    background: url(../images/main_bg_vol3@2x.webp);
     background-size: cover;
     background-position-y: center;
 }
