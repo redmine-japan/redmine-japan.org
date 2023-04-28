@@ -1,0 +1,261 @@
+title: Redmine Japan Vol-3
+room:
+  - title: A会場
+    class: rd
+    width: 4
+  - title: B会場
+    class: og
+    width: 4
+  - title: C会場
+    class: yl
+    width: 2
+body:
+  - start: 9:00
+    title: 開場
+  - start: 10:00
+    events:
+      id: A01
+      title: Remoの使い方を事前説明
+  - start: 10:15
+    end: 10:30
+    title: 開会の挨拶
+    speaker: REDMINE JAPAN 実行委員長　川端 光義
+  - start: 10:30
+    end: 10:55
+    events:
+      id: A02
+      category: 基調講演
+      title: Rubyにみる分散開発OSSコミュニティ
+      speaker: まつもとゆきひろ
+  - start: 10:55
+    end: 11:00
+    note: 休憩5分
+  - start: 11:00
+    end: 11:25
+    events:
+      id: A03
+      category: 招待講演
+      title: 次期バージョン Redmine 4.2 の注目新機能
+      speaker: 前田剛
+  - start: 11:25
+    end: 11:30
+    note: スポンサー紹介
+  - start: 11:30
+    end: 11:35
+    events:
+      a:
+        note: 休憩5分
+      b:
+        ditto: left
+      c:
+        note: ""
+        narrow: true
+  - start: 11:35
+    end: 12:00
+    events:
+      a:
+        id: A04
+        title: ロケーションフリー開発環境の実現 ～Redmineと仮想開発環境による～
+        speaker: 金子博
+      b:
+        id: B04
+        title: RedmineをDockerに載せてみた
+        speaker: 藤田優貴
+      c:
+        ditto: top
+  - start: 12:00
+    end: 13:00
+    events:
+      a:
+        note: 昼休憩
+      b:
+        ditto: left
+      c:
+        ditto: top
+  - start: 13:00
+    end: 13:25
+    events:
+      a:
+        subevents:
+        - id: A05
+          title: Redmineでコミュニティサイトを運営しています（10分）
+          speaker: 小林慎治
+        - id: A06
+          title: あなたの行動を記録し、記憶につなげよう（15分）
+          speaker: 高野明子
+      b:
+        subevents:
+        - id: B05
+          title: なんでRedmineなの？ ~コミュニティの歴史と、これからのご提案〜（15分）
+          speaker: yukia
+        - id: B06
+          title: みんなでRedmineを改善しましょう！「Redmineパッチ会」参戦！！（10分）
+      c:
+        ditto: top
+  - start: 13:25
+    end: 13:30
+    events:
+      a:
+        note: 休憩5分
+      b:
+        ditto: left
+      c:
+        ditto: top
+  - start: 13:30
+    end: 13:55
+    events:
+      a:
+        id: A07
+        title: redmineと出会う前と出会ってからの７年<br>そしてこれから
+        speaker: 門屋浩文
+      b:
+        id: B07
+        title: Redmineの画面をあなた好みにカスタマイズ<br>– View customize pluginの紹介 –
+        speaker: 小野里拓一
+      c:
+        ditto: top
+  - start: 13:55
+    end: 14:00
+    events:
+      a:
+        note: 休憩5分
+      b:
+        ditto: left
+      c:
+        ditto: top
+  - start: 14:00
+    end: 14:25
+    events:
+      a:
+        id: A08
+        category: 事例紹介
+        title: Redmineで実現する高品質なシステムの開発と運用
+        speaker: NTTコムウェア 堀部壮彦
+      b:
+        id: B08
+        category: 事例紹介
+        title: Redmineのメール取り込み機能を進化させたメール電文をキーに動作するSHERPA及び事例の紹介
+        speaker: シェルパスイート
+      c:
+        ditto: top
+  - start: 14:25
+    end: 14:30
+    events:
+      a:
+        note: 休憩5分
+      b:
+        ditto: left
+      c:
+        ditto: top
+  - start: 14:30
+    end: 14:55
+    events:
+      a:
+        id: A09
+        title: ある工場 と Redmine
+        speaker: Kohei Nakamura
+      b:
+        id: B09
+        title: Redmine データベースのテーブル構造を紐解いてみる
+        speaker: Juno NISHIZAKI
+      c:
+        ditto: top
+  - start: 14:55
+    end: 15:00
+    events:
+      a:
+        note: 休憩5分
+      b:
+        ditto: left
+      c:
+        ditto: top
+  - start: 15:00
+    end: 15:25
+    events:
+      a:
+        id: A10
+        category: 事例紹介
+        title: Redmine導入時のあるある
+        speaker: アジャイルウェア
+      b:
+        id: B10
+        category: 事例紹介
+        title: My Redmine Gen.2 を支えるインフラストラクチャー
+        speaker: ファーエンドテクノロジー
+      c:
+        ditto: top
+  - start: 15:25
+    end: 15:30
+    events:
+      a:
+        note: 休憩5分
+      b:
+        ditto: left
+      c:
+        ditto: top
+  - start: 15:30
+    end: 15:55
+    events:
+      a:
+        id: A11
+        title: チケット駆動開発がまわりはじめるまでの取り組み
+        speaker: 梅原 潤
+      b:
+        id: B11
+        category: パネルディスカッション
+        title: テレワークでチャットとRedmineをどのように使い分けるか
+      c:
+        ditto: top
+  - start: 15:55
+    end: 16:00
+    events:
+      a:
+        note: 休憩5分
+      b:
+        ditto: left
+      c:
+        ditto: top
+  - start: 16:00
+    end: 16:25
+    events:
+      a:
+        id: A12
+        category: パネルディスカッション
+        title: なぜRedmineによるタスク管理が失敗するか
+      b:
+        id: B12
+        category: 事例紹介
+        title: テレワークにおけるRedmineとテスト管理を活用したコミュニケーション術
+        speaker: テクマトリクス
+      c:
+        ditto: top
+  - start: 16:25
+    end: 16:30
+    events:
+      a:
+        note: 休憩5分
+      b:
+        ditto: left
+      c:
+        ditto: top
+  - start: 16:30
+    end: 17:00
+    events:
+      id: A13
+      category: 基調講演
+      title: withコロナ時代のアジャイルとコミュニケーション　〜効果的な場作りとツール〜
+      speaker: 平鍋健児
+  - start: 17:00
+    end: 17:15
+    events:
+      id: A14
+      title: Redmineコミュニティの活動報告と今後の抱負
+      speaker: あきぴー
+  - start: 17:15
+    end: 17:30
+    events:
+      id: A15
+      title: クロージング
+  - start: 17:30
+    end: 19:00
+    note: オンライン懇親会　告知タイム

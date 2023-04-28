@@ -1,0 +1,92 @@
+<div class="container table_topttl">
+  <div class="row">
+    <div class="col-lg-2 col-md-12 text-center table-border table-bg-gr">
+      <p class="m-md-2">TIME</p>
+    </div>
+{{ range .Site.Data.timetable.room }}
+  <div class="col-lg-{{ .width }} col-md-12 text-center table-border table-bg-{{ .class}}">
+    <p class="m-md-2"><a href="" class="head" target="_target" rel="noopener noreferrer">{{ .title }}</a></p>
+  </div>
+{{ end }}
+  </div>
+</div>
+{{ range .Site.Data.timetable.body }}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2 col-md-12 text-center table-border table-bg-gr">
+      <p class="lead m-md-1 table-fontsize-main">{{ .start }} {{ with .end }} ～ {{ . }} {{ end }}</p>
+    </div>
+
+{{ with .events }}
+  {{ if isset . "id" }}
+    <div class="col-lg-10 col-md-12 text-left bg-white text-dark table-border table-mix">
+      {{ partial "event.html" . }}
+    </div>
+  {{ else }}
+    {{ range $room, $event := . }}
+      {{ if isset $event "id" }}
+        {{ partial "event_box.html" (partial "event.html" $event) }}
+      {{ end }}
+
+      {{ with $event.subevents }}
+        {{ partial "event_box.html" (partial "subevent.html" .) }}
+      {{ end }}
+
+      {{ with $event.note }}
+        <div class="col-lg-8 col-md-12 text-center table-bg-break text-dark table-border table-mix">
+          <p class="lead m-md-1 table-fontsize-main">{{ . }}</p>
+        </div>
+      {{ end }}
+
+      {{ if (or (and (isset $event "ditto") (eq $event.ditto "top")) (isset $event "narrow")) }}
+        {{ partial "note.html" $event }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ else }}
+  {{ with .note }}
+  <div class="col-lg-10 col-md-12 text-center bg-white text-dark table-border table-mixall">
+    <p class="lead m-md-1 table-fontsize-main">
+      {{ . }}
+    </p>
+  </div>
+  {{ else }}
+  <div class="col-lg-10 col-md-12 text-left bg-light text-dark table-border table-mix">
+    <p class="lead m-md-1 table-fontsize-main">
+      {{ .title }}<br />
+      {{ .speaker }}
+    </p>
+  </div>
+  {{ end }}
+{{ end }}
+  </div>
+</div>
+{{ end }}
+
+{{ define "partials/event_box.html" }}
+  <div class="col-lg-4 col-md-12 text-left bg-white text-dark table-border">
+    {{ . }}
+  </div>
+{{ end }}
+
+{{ define "partials/subevent.html" }}
+  {{ range . }}
+    {{ partial "event.html" . }}
+  {{ end }}
+{{ end }}
+
+{{ define "partials/event.html" }}
+  <p class="lead m-md-1 table-fontsize-main">
+   【{{ .id }}】
+    <a href="#">{{ .speaker }}<br />
+    {{ safeHTML .title }}</a>
+  </p>
+{{ end }}
+
+{{ define "partials/note.html" }}
+   {{ $border := cond (and (isset . "ditto") (eq .ditto "top")) "" "table-border" }}
+   {{ $border := cond (isset . "narrow") "table-border-top" $border}}
+   <div class="col-lg-2 col-md-12 text-center {{ $border }} bg-white table-bg-cr text-dark">
+     <p class="m-md-2">{{ .note }}{{ .banner }}</p>
+   </div>
+{{ end }}
