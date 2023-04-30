@@ -7,7 +7,7 @@
 
 @media (min-width: 1200px){
 .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 1024px;
+    max-width: 1140px;
 }
 }
 
@@ -20,8 +20,12 @@ p{
 	line-height: 1.8;
 }
 
-nav.navbar-bg{
+nav.navbar-bg-home{
 	background-color: rgba(97,147,175,65%);
+}
+
+nav.navbar-bg{
+	background-color: #6193AF
 }
 
 svg.logo {
@@ -656,244 +660,9 @@ margin-bottom: 50px;
     opacity: 0.9;
 }
 */
-/*
-#time-table .first-row h2{
-  margin-bottom:0;
-}
-#time-table .lead .remo-guide{
-    padding: 10px 20px;
-    border: solid 2px #fff;
-    display: inline-block;
-    color: #fff;
-    border-radius: 2px;
-    transition: 0.3s;
-}
-#time-table .lead .remo-guide:hover {
-  background: #fff;
-  color: #0b3d4c !important;
-  transition: 0.3s;
-}
-#time-table .remo-venue a {
-    text-decoration: none;
-    display: block;
-    color: #fff;
-    font-size: 1.1rem;
-    letter-spacing: 0.08em;
-}
-
-
-#time-table .remo-venue a:after {
-    font-family: "Font Awesome 5 Free";
-    content: "\f3c5";
-    font-weight: 900;
-    display: inline-block;
-    color: #fff;
-    padding-left: 5px;
-    }
-
-#time-table .top_twitter {
-    display: inline-block;
-    bottom: 5px;
-    left: 0;
-    font-size: 0.9rem;
-    letter-spacing: 0.05em;
-    line-height: 1.8;
-}
-#time-table .top_twitter .twitter {
-    margin-left: 0px !important;
-    color: #5ac0ff !important;
-}
-#time-table .top_twitter span {
-    color: #5ac0ff;
-    font-size: 16px;
-    margin-left: 30px;
-    display: inline-block;
-    padding-top: 5px;
-}
-#time-table .top_twitter .twitter:before {
-    top: 0 !important;
-    left: -5px !important;
-}
-#time-table .top_twitter .twitter:hover {
-    color: #c0fcff !important;
-    transition: 0.3s;
-}
-.table-bg-gr {
-    background: #42717d;
-}
-
-.table-bg-og {
-    background: #a5490f;
-    transition: 0.3s;
-}
-.table-bg-og:hover {
-    background: #d26c2c;
-    transition: 0.3s;
-}
-.table-bg-rd {
-    background: #88121c;
-    transition: 0.3s;
-}
-.table-bg-rd:hover {
-    background: #ca3b47;
-    transition: 0.3s;  
-}
-.table-bg-yl {
-    background: #f2c410;
-    transition: 0.3s;
-}
-.table-bg-yl:hover {
-    background: #ffe000;
-    transition: 0.3s;
-}
-
-.table-bg-cr {
-    background: #fff5ce !important;;
-}
-.table-bg-break {
-      background: #d2e8e8 !important;
-}
-.table-border {
-    border: 2px solid #093340;
-}
-
-.table-fontsize-main {
-    font-size: 16px;
-}
-.c-hall{
-    background: #fbfaf2 !important;
-    border-top: none;
-    border-bottom: none;
-}
-.c-hall p{
-      padding: 10px 0;
-}
-#time-table p[id] {
-    padding-top: 30px;
-    margin-top: -30px !important;
-}
-.sp_none {
-    display: none;
-}
-@media (max-width: 767px) {
-  #time-table .guide{
-  text-align: center !important;  
-}
-}
-
-@media (max-width: 991px) {
-  .table_topttl{
-    display: none;
-  }
-.sp_none {
-    display: block;
-}  
-#time-table:after {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    height: 80%;
-    padding: 0;
-    line-height: 50;
-}
-
-#time-table .row div:nth-child(2):before {content: "A会場";background: #88121c;top: 0;left: 0px;position: absolute;padding: 3px 15px;font-size: 13px;color: #f8f9fa;}
-
-#time-table .row div:nth-child(2) {
-    position: relative;
-    padding-top: 25px !important;
-    padding-bottom: 10px;
-}
-#time-table .row div:nth-child(3):before {content: "B会場";background: #b6362b;top: 0;left: 0px;position: absolute;padding: 3px 15px;font-size: 13px;color: #f8f9fa;}
-
-#time-table .row div:nth-child(3) {
-    position: relative;
-    padding-top: 25px;
-    padding-bottom: 10px;
-}
-#time-table .row div:last-child:before {content: "C会場";background: #f2c410;top: 0;left: 0px;position: absolute;padding: 3px 15px;font-size: 13px;color: #093340;}
-
-#time-table .row div:last-child {
-    position: relative;
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-  
-#time-table .row.first-row div:last-child:before{
-    display:none;
-}
-  
-}
-@media (max-width: 991px) {
-    #time-table .row div.table-mix::before {
-    content: "A・B会場";
-    background: linear-gradient(#89111d 0%, #89111d 50%, #b7362c 50%, #b7362c 100%);
-    top: 0;
-    left: 0px;
-    position: absolute;
-    padding: 3px 15px;
-    font-size: 13px;
-    color: #f8f9fa;
-}
-    #time-table .row div.table-mixall::before {
-    content: "全会場";
-    background:linear-gradient(#89111d 0%, #89111d 50%, #b7362c 50%, #b7362c 100%);
-    top: 0;
-    left: 0px;
-    position: absolute;
-    padding: 3px 15px;
-    font-size: 13px;
-    color: #f8f9fa;
-}  
-    #speakers_details .text-left a {
-    word-wrap: break-word;
-}
-}
-
-#time-table .lead a {
-    display: block;
-    text-decoration: none;
-    color:#42717c;
-}
-#time-table .lead a:hover {
-    color: #68a2b9;
-}
-#time-table a.keynote {
-    color: #d8920d;
-}
-#time-table a.keynote:hover {
-    color: #eaa863;
-}
-#time-table a.invitation {
-    color: #c76704;
-}
-#time-table a.invitation:hover {
-    color: #f78f24;
-}
-#time-table a.case {
-    color: #20a279;
-}
-#time-table a.case:hover {
-    color: #32b994;
-}
-#time-table a.use {
-    color: #bd4778;
-}
-#time-table a.use:hover {
-    color: #f978ae;
-}
-#time-table a.tec {
-    color: #2289d4;
-}
-#time-table a.tec:hover {
-    color: #31a8fd;
-}
-*/
-/*ここまで旧タイムテーブルページ*/
-
 #timetable.jumbotron {
-    background: url(https://redmine-japan.org/wp-content/themes/redmine-japan_vol-2/images/main_bg2021@2x.jpg);
+    background-color: #f3feff;
+    color: #08346c;
     background-size: cover;
     background-position-y: center;
 }
@@ -964,6 +733,45 @@ margin-bottom: 50px;
 	#timetable.jumbotron a.timetable-btn h3 {
 		line-height: 0.9;		
 	}
+}
+
+#timetable.jumbotron a.head {
+  color: #fff;
+}
+
+#timetable.jumbotron a.case {
+  color: #08346c;
+}
+
+.table-border {
+  border: 2px 2px 2px 0 solid #f3feff;
+}
+
+.table-border {
+  border: 2px solid #f3feff;
+}
+
+.table-bg-gr {
+  color: #fff;
+  background-color: #6BCACA;
+}
+.table-bg-rd {
+  color: #fff;
+  background-color: #C96B6B;
+}
+
+.table-bg-og {
+  color: #fff;
+  background-color: #6B6BC9;
+}
+
+.table-bg-yl {
+  color: #fff;
+  background-color: #C9C96B;
+}
+
+.table-fontsize-main {
+  font-size: 16px
 }
 
 #access.jumbotron{

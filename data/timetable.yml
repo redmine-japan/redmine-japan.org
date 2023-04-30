@@ -63,6 +63,7 @@ body:
         speaker: 藤田優貴
       c:
         ditto: top
+        banner: スポンサーブースと雑談広場
   - start: 12:00
     end: 13:00
     events:
@@ -114,6 +115,7 @@ body:
         speaker: 小野里拓一
       c:
         ditto: top
+        banner: スポンサーブースと雑談広場
   - start: 13:55
     end: 14:00
     events:
@@ -184,6 +186,7 @@ body:
         speaker: ファーエンドテクノロジー
       c:
         ditto: top
+        banner: スポンサーブースと雑談広場
   - start: 15:25
     end: 15:30
     events:

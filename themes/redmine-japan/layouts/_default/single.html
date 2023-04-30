@@ -1,6 +1,13 @@
 {{ define "main" }}
 <div id="{{ .File.ContentBaseName }}" class="jumbotron">
   <div class="container">
+    <div class="row first-row">
+      <div class="col-lg-12 mb-4 mt-2 text-center">
+        <h1>{{ .Title }}</h1>
+      </div>
+    </div>
+  </div>
+  <div class="container">
     <div class="row">
       <div class="col-12">
         {{ .Content }}
