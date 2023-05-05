@@ -9,6 +9,9 @@ room:
   - title: C会場
     class: yl
     width: 2
+categoriy:
+  keynote: 基調講演
+  invited: 招待講演
 body:
   - start: 9:00
     title: 開場
@@ -24,9 +27,14 @@ body:
     end: 10:55
     events:
       id: A02
-      category: 基調講演
-      title: Rubyにみる分散開発OSSコミュニティ
-      speaker: まつもとゆきひろ
+      category: keynote
+      title: 引継ぎから始まるスクラム
+      speaker: 川口 恭伸
+      furigana: かわぐち やすのぶ
+      photo: speaker-1.webp
+      alt: YesNoBut株式会社　代表取締役・アギレルゴコンサルティング株式会社　シニアアジャイルコーチ　川口 恭伸氏
+      profile: speaker-1.md
+      session: session-1.md
   - start: 10:55
     end: 11:00
     note: 休憩5分
@@ -34,7 +42,7 @@ body:
     end: 11:25
     events:
       id: A03
-      category: 招待講演
+      category: invited
       title: 次期バージョン Redmine 4.2 の注目新機能
       speaker: 前田剛
   - start: 11:25
@@ -245,9 +253,14 @@ body:
     end: 17:00
     events:
       id: A13
-      category: 基調講演
-      title: withコロナ時代のアジャイルとコミュニケーション　〜効果的な場作りとツール〜
-      speaker: 平鍋健児
+      category: keynote
+      title: 講演タイトル準備中
+      speaker: 四宮 靖隆
+      furigana: しのみや やすたか
+      photo: speaker-2.webp
+      alt: 株式会社ジョイゾー　代表取締役 四宮靖隆氏
+      profile: speaker-2.md
+      session: session-2.md
   - start: 17:00
     end: 17:15
     events:

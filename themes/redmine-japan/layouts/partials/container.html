@@ -12,12 +12,8 @@
 
     <div class="container">
       {{ $partial  := .identifier | printf "%s.html" }}
-      {{ if .context.Params.pattern }}
-        {{ $contents := .context.Resources.Match .context.Params.pattern }}
-        {{ $parent := .context }}
-        {{ range sort $contents "Name" }}
-          {{ partial $partial (dict "context" . "parent" $parent) }}
-        {{ end }}
+      {{ if .context.Params.multiple }}
+        {{ partial $partial .context }}
       {{ else }}
       <div class="row">
         {{ partial $partial .context }}

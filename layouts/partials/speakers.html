@@ -1,19 +1,24 @@
+{{ range where .Site.Data.timetable.body "events.category" "keynote" }}
+{{ with .events }}
+  {{ $photo := $.Page.Resources.GetMatch .photo }}
+  {{ $profile := $.Page.Resources.GetMatch .profile }}
+  {{ $session := $.Page.Resources.GetMatch .session }}
 <div class="row speaker">
-  {{ if isset .context.Params "session" }}
-    {{ $session := .parent.Resources.GetMatch .context.Params.session }}
+  {{ if isset . "session" }}
   <div class="col-xl-12 col-lg-12 text-center mt-4 mb-5 speech-ttl">
-    <h3 class="font-weight-bold">{{ $session.Title }}</h3>
+    <h3 class="font-weight-bold">{{ .title }}</h3>
     {{ $session.Content }}
   </div>
   {{ end }}
-  {{ $photo := .parent.Resources.GetMatch .context.Params.photo }}
   <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 text-center">
-    <img class="rounded" alt="{{ .context.Params.Alt }}" src="{{ $photo.RelPermalink }}" width="{{ $photo.Width }}" height="{{ $photo.Height }}" data-holder-rendered="true" loading="lazy">
+    <img class="rounded" alt="{{ .alt }}" src="{{ $photo.RelPermalink }}" width="{{ $photo.Width }}" height="{{ $photo.Height }}" data-holder-rendered="true" loading="lazy">
   </div>
   <div class="col-xl-7 col-lg-6 col-md-6 col-sm-12 text-left">
-    <h3 style="line-height:2;">{{ .context.Title }}</h3>
+    <h3 style="line-height:2;">{{ .speaker }} ({{ .furigana }})氏</h3>
     <div class="speaker_text text-blue">
-      {{ .context.Content }}
+      {{ $profile.Content }}
     </div>
   </div>
 </div>
+{{ end }}
+{{ end }}
