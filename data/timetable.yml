@@ -35,9 +35,6 @@ body:
       alt: YesNoBut株式会社　代表取締役・アギレルゴコンサルティング株式会社　シニアアジャイルコーチ　川口 恭伸氏
       profile: speaker-1.md
       session: session-1.md
-  - start: 10:55
-    end: 11:00
-    note: 休憩5分
   - start: 11:00
     end: 11:25
     events:
@@ -48,16 +45,6 @@ body:
   - start: 11:25
     end: 11:30
     note: スポンサー紹介
-  - start: 11:30
-    end: 11:35
-    events:
-      a:
-        note: 休憩5分
-      b:
-        ditto: left
-      c:
-        note: ""
-        narrow: true
   - start: 11:35
     end: 12:00
     events:
@@ -101,15 +88,6 @@ body:
           title: みんなでRedmineを改善しましょう！「Redmineパッチ会」参戦！！（10分）
       c:
         ditto: top
-  - start: 13:25
-    end: 13:30
-    events:
-      a:
-        note: 休憩5分
-      b:
-        ditto: left
-      c:
-        ditto: top
   - start: 13:30
     end: 13:55
     events:
@@ -124,15 +102,6 @@ body:
       c:
         ditto: top
         banner: スポンサーブースと雑談広場
-  - start: 13:55
-    end: 14:00
-    events:
-      a:
-        note: 休憩5分
-      b:
-        ditto: left
-      c:
-        ditto: top
   - start: 14:00
     end: 14:25
     events:
@@ -148,15 +117,6 @@ body:
         speaker: シェルパスイート
       c:
         ditto: top
-  - start: 14:25
-    end: 14:30
-    events:
-      a:
-        note: 休憩5分
-      b:
-        ditto: left
-      c:
-        ditto: top
   - start: 14:30
     end: 14:55
     events:
@@ -168,15 +128,6 @@ body:
         id: B09
         title: Redmine データベースのテーブル構造を紐解いてみる
         speaker: Juno NISHIZAKI
-      c:
-        ditto: top
-  - start: 14:55
-    end: 15:00
-    events:
-      a:
-        note: 休憩5分
-      b:
-        ditto: left
       c:
         ditto: top
   - start: 15:00
@@ -195,15 +146,6 @@ body:
       c:
         ditto: top
         banner: スポンサーブースと雑談広場
-  - start: 15:25
-    end: 15:30
-    events:
-      a:
-        note: 休憩5分
-      b:
-        ditto: left
-      c:
-        ditto: top
   - start: 15:30
     end: 15:55
     events:
@@ -215,15 +157,6 @@ body:
         id: B11
         category: パネルディスカッション
         title: テレワークでチャットとRedmineをどのように使い分けるか
-      c:
-        ditto: top
-  - start: 15:55
-    end: 16:00
-    events:
-      a:
-        note: 休憩5分
-      b:
-        ditto: left
       c:
         ditto: top
   - start: 16:00
@@ -238,15 +171,6 @@ body:
         category: 事例紹介
         title: テレワークにおけるRedmineとテスト管理を活用したコミュニケーション術
         speaker: テクマトリクス
-      c:
-        ditto: top
-  - start: 16:25
-    end: 16:30
-    events:
-      a:
-        note: 休憩5分
-      b:
-        ditto: left
       c:
         ditto: top
   - start: 16:30
