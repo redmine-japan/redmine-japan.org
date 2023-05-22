@@ -25,11 +25,11 @@
   {{ else }}
     {{ range $room, $event := . }}
       {{ if isset $event "id" }}
-        {{ partial "event_box.html" (partial "event.html" $event) }}
+        {{ partial "event_box.html" (dict "event" (partial "event.html" $event) "room" $room) }}
       {{ end }}
 
       {{ with $event.subevents }}
-        {{ partial "event_box.html" (partial "subevent.html" .) }}
+        {{ partial "event_box.html" (dict "event" (partial "subevent.html" .) "room" $room) }}
       {{ end }}
 
       {{ with $event.note }}
@@ -64,8 +64,9 @@
 {{ end }}
 
 {{ define "partials/event_box.html" }}
-  <div class="col-lg-4 col-md-12 text-left bg-white text-dark table-border">
-    {{ . }}
+  {{ $width := cond (eq .room "a") 4 3 }}
+  <div class="col-lg-{{$width}} col-md-12 text-left bg-white text-dark table-border">
+    {{ .event }}
   </div>
 {{ end }}
 
@@ -86,7 +87,7 @@
 {{ define "partials/note.html" }}
    {{ $border := cond (and (isset . "ditto") (eq .ditto "top")) "" "table-border" }}
    {{ $border := cond (isset . "narrow") "table-border-top" $border}}
-   <div class="col-lg-2 col-md-12 text-center {{ $border }} bg-white table-bg-cr text-dark">
+   <div class="col-lg-3 col-md-12 text-center {{ $border }} bg-white table-bg-cr text-dark">
      <p class="m-md-2">{{ .note }}{{ .banner }}</p>
    </div>
 {{ end }}

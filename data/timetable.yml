@@ -5,22 +5,22 @@ room:
     width: 4
   - title: 407号室
     class: og
-    width: 4
+    width: 3
   - title: 406号室
     class: yl
-    width: 2
+    width: 3
 categoriy:
   keynote: 基調講演
   invited: 招待講演
 body:
   - start: 9:30
     title: 開場
-  - start: 10:00
+  - start: 10:15
     events:
       id: A01
       title: オープニングセッション
-  - start: 10:30
-    end: 11:30
+  - start: 10:25
+    end: 11:15
     events:
       id: A02
       category: keynote
@@ -31,110 +31,63 @@ body:
       alt: YesNoBut株式会社　代表取締役・アギレルゴコンサルティング株式会社　シニアアジャイルコーチ　川口 恭伸氏
       profile: speaker-1.md
       session: session-1.md
-  - start: 11:45
-    end: 13:00
+  - start: 11:30
+    end: 12:50
     events:
       a:
         note: 昼休憩
       b:
         ditto: left
       c:
-        ditto: top
-  - start: 13:00
-    end: 13:30
+        ditto: left
+  - start: 12:45
+    end: 13:15
     events:
       id: A03
       category: invited
-      title: Redmine入門セッション
+      title: ＜タイトル調整中＞
       speaker: 前田 剛
   - start: 13:30
-    end: 14:00
-    events:
-      a:
-        id: A04
-        title: プロジェクト管理の失敗談トークタイム
-      b:
-        id: B04
-        title: スタッフが考えたプラグインおすすめ5選
-      c:
-        ditto: top
-  - start: 14:00
-    end: 14:30
-    events:
-      a:
-        id: A05
-        title: 募集中
-      b:
-        id: B05
-        title: Redmineパッチ会体験ワークショップ
-      c:
-        ditto: top
-  - start: 14:30
-    end: 15:00
-    events:
-      a:
-        id: A06
-        title: 事例セッション
-        speaker: 門谷さん
-      b:
-        id: B06
-        title: 募集中
-      c:
-        narrow: true
-        banner: Redmine初心者ワークショップ
-  - start: 15:00
-    end: 15:30
-    events:
-      a:
-        id: A07
-        title: 事例セッション
-      b:
-        id: B07
-        title: プラグイン開発で出来るようになる事
-      c:
-        narrow: true
-        banner: 募集中
-  - start: 15:30
-    end: 16:00
-    events:
-      a:
-        id: A08
-        title: 事例セッション
-      b:
-        id: B08
-        title: タスク管理を学ぼう
-      c:
-        narrow: true
-        banner: Redmine伝言ゲーム or 障害物リレー
-  - start: 16:00
     end: 16:30
     events:
       a:
-        id: A09
-        title: Redmine Award
+        subevents:
+        - id: A06
+          title: ありたい姿を考えてチケット駆動マネジメントを導入するヒント
+          speaker: 門谷浩文
       b:
-        id: B09
-        title: プロジェクト管理を学ぼう
+        subevents:
+        - id: B04
+          title: スタッフが考えたプラグインおすすめ5選
+        - id: B05
+          title: タスク管理を学ぼう(仮題)
+        - id: B08
+          title: プロジェクト管理を学ぼう(仮題)
       c:
-        narrow: true
-        banner: 募集中
-  - start: 16:30
-    end: 17:20
+        ditto: top
+        banner: ＜募集中＞
+  - start: 16:00
+    end: 17:00
     events:
       id: A10
       category: keynote
-      title: 講演タイトル準備中
+      title: 「そのDXは本当に必要なのか」〜御社にそのシステムは不要です〜
       speaker: 四宮 靖隆
       furigana: しのみや やすたか
       photo: speaker-2.webp
       alt: 株式会社ジョイゾー　代表取締役 四宮靖隆氏
       profile: speaker-2.md
       session: session-2.md
+  - start: 17:00
+    end: 17:20
+    events:
+      id: A11
+      title: Redmine Award
   - start: 17:20
     end: 18:00
     events:
       id: A11
-      title: 交流会(2Fイベントフォール桃源)
+      title: 交流会(2Fイベントホール桃源)
   - start: 18:00
     end: 18:30
     events:
