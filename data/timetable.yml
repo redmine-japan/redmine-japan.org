@@ -52,9 +52,11 @@ body:
     events:
       a:
         subevents:
-        - id: A06
+        - id: A04
           title: ありたい姿を考えてチケット駆動マネジメントを導入するヒント
           speaker: 門谷浩文
+        - id: A05
+          title: 前橋市によるRedmine運用事例紹介(仮題)
       b:
         subevents:
         - id: B04

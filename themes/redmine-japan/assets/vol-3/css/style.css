@@ -667,6 +667,10 @@ margin-bottom: 50px;
     background-position-y: center;
 }
 
+#timetable.jumbotron a {
+    color: #08346c;
+}
+
 #timetable.jumbotron a.timetable-btn {
     display: block;
     padding: 20px 30px 30px;

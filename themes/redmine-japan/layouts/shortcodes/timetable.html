@@ -78,9 +78,13 @@
 
 {{ define "partials/event.html" }}
   <p class="lead m-md-1 table-fontsize-main">
-   【{{ .id }}】
+  {{ if isset . "url" }}
     <a href="#">{{ .speaker }}<br />
     {{ safeHTML .title }}</a>
+  {{ else }}
+    {{ .speaker }}<br />
+    {{ safeHTML .title }}
+  {{ end }}
   </p>
 {{ end }}
 
