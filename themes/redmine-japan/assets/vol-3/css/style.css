@@ -747,6 +747,37 @@ margin-bottom: 50px;
   color: #08346c;
 }
 
+#timetable.jumbotron span.speaker {
+font-size: 90%;
+}
+
+#timetable.jumbotron span.category {
+display: inline-block;
+padding: 1px 6px;
+border-radius: 5px;
+margin-right: 20px;
+color: #fff;
+font-size: 90%;
+margin-top: 10px;
+margin-bottom: 5px;
+}
+
+#timetable.jumbotron span.category.keynote {
+  background-color: #b17e49
+}
+
+#timetable.jumbotron span.category.invited {
+  background-color: #c76704
+}
+
+#timetable.jumbotron span.category.ops {
+  background-color: #bd4778
+}
+
+#timetable.jumbotron span.category.case {
+  background-color: #28866c
+}
+
 .table-border {
   border: 2px 2px 2px 0 solid #f3feff;
 }

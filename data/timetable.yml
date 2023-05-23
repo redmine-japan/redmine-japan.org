@@ -16,6 +16,7 @@ body:
   - start: 9:30
     title: 開場
   - start: 10:15
+    end: 10:25
     events:
       id: A01
       title: オープニングセッション
@@ -53,17 +54,22 @@ body:
       a:
         subevents:
         - id: A04
+          category: ops
           title: ありたい姿を考えてチケット駆動マネジメントを導入するヒント
           speaker: 門谷浩文
         - id: A05
+          category: invited
           title: 前橋市によるRedmine運用事例紹介(仮題)
       b:
         subevents:
         - id: B04
+          category: case
           title: スタッフが考えたプラグインおすすめ5選
         - id: B05
+          category: ops
           title: タスク管理を学ぼう(仮題)
         - id: B08
+          category: ops
           title: プロジェクト管理を学ぼう(仮題)
       c:
         ditto: top

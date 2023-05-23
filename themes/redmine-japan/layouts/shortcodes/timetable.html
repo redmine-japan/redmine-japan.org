@@ -77,13 +77,23 @@
 {{ end }}
 
 {{ define "partials/event.html" }}
+  {{ $cat := dict "keynote" "基調講演" "invited" "招待講演" "ops" "運用" "case" "事例" }}
   <p class="lead m-md-1 table-fontsize-main">
+  {{ if isset . "category" }}
+  <span class="category {{ .category }}">{{ index $cat .category }}</span><br/>
+  {{ end }}
   {{ if isset . "url" }}
-    <a href="#">{{ .speaker }}<br />
-    {{ safeHTML .title }}</a>
-  {{ else }}
-    {{ .speaker }}<br />
+    <a href="#">
     {{ safeHTML .title }}
+    {{ if isset . "speaker" }}
+    <br/><span class="speaker">{{ .speaker }}</span>
+    {{ end }}
+    </a>
+  {{ else }}
+    {{ safeHTML .title }}
+    {{ if isset . "speaker" }}
+    <br /><span class="speaker">{{ .speaker }}</span>
+    {{ end }}
   {{ end }}
   </p>
 {{ end }}
