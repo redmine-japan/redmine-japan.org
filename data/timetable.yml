@@ -48,8 +48,8 @@ body:
       category: invited
       title: ＜タイトル調整中＞
       speaker: 前田 剛
-  - start: 13:30
-    end: 16:30
+  - start: 13:20
+    end: 16:00
     events:
       a:
         subevents:
@@ -75,7 +75,7 @@ body:
         ditto: top
         banner: ＜募集中＞
   - start: 16:00
-    end: 17:00
+    end: 16:50
     events:
       id: A10
       category: keynote
