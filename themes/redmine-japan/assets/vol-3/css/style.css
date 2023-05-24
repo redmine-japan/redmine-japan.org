@@ -1070,6 +1070,8 @@ a.entry {
 #speakers_details .speaker img {
     margin-top: 10px;
     margin-bottom: 30px;
+    width: 250px;
+    height: 250px;
 }
 #speakers_details .sp_simple .speaker img {
     width: 250px;
