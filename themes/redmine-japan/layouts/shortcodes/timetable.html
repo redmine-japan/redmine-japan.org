@@ -1,3 +1,4 @@
+<section>
 <div class="container table_topttl">
   <div class="row">
     <div class="col-lg-2 col-md-12 text-center table-border table-bg-gr">
@@ -12,7 +13,7 @@
 </div>
 {{ range .Site.Data.timetable.body }}
 <div class="container">
-  <div class="row">
+  <div class="row" {{ with .time }} id="{{ . }}" {{ end }}>
     <div class="col-lg-2 col-md-12 text-center table-border table-bg-gr">
       <p class="lead m-md-1 table-fontsize-main">{{ .start }} {{ with .end }} ～ {{ . }} {{ end }}</p>
     </div>
@@ -62,6 +63,54 @@
   </div>
 </div>
 {{ end }}
+</section>
+
+{{/* 講演詳細 */}}
+<section>
+  <div id="speakers_details" class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mb-4 mt-2 text-center">
+          <h2 style="margin: 30px 0 0;">講演内容</h2>
+        </div>
+      </div>
+    </div>
+
+{{ $speakers := $.Site.GetPage "/speakers" }}
+
+{{ range .Site.Data.timetable.body }}
+  {{ $start := .start }}
+  {{ $end   := .end }}
+  {{ $time  := .time }}
+{{ with .events }}
+  {{ if isset . "anchor" }}
+    {{ $photo   := $speakers.Resources.GetMatch .photo }}
+    {{ $profile := $speakers.Resources.GetMatch .profile }}
+    {{ $session := $speakers.Resources.GetMatch .session }}
+<div id="{{ .anchor }}" class="container ">
+  <a class="back_timetable" href="#{{ $time }}">タイムテーブルへ</a>
+  <div class="row sp_details text-center">
+    <div class="col-sm-12 col-md-10 mx-auto text-center">
+      <p class="lecture_top text-left">
+        <span class="a-hall">{{ .id }}</span>
+        <span class="keynote">基調講演</span>{{ $start }}〜{{ $end }}
+      </p>
+      <h3 class="text-left">{{ safeHTML .title }}</h3>
+      <p class="text-left lecture_text">{{ partial "strip_p_element" $session }}</p>
+    </div>
+    <div class="col-xl-4 col-lg-3 col-md-10 col-sm-12 mx-auto text-center speaker">
+      <img class="rounded" alt="{{ .alt }}" src="{{ $photo.RelPermalink }}" width="{{ $photo.Width }}" height="{{ $photo.Height }}" data-holder-rendered="true" loading="lazy">
+    </div>
+    <div class="col-xl-6 col-lg-7 col-md-10 col-sm-12 mx-auto text-center speaker">
+      <h3 class="text-left">{{ .speaker }}</h3>
+      <p class="text-left speaker_text">{{ partial "strip_p_element" $profile }}</p>
+    </div>
+  </div>
+</div>
+  {{ end }}
+{{ end }}
+{{ end }}
+</section>
 
 {{ define "partials/event_box.html" }}
   {{ $width := cond (eq .room "a") 4 3 }}
@@ -82,8 +131,8 @@
   {{ if isset . "category" }}
   <span class="category {{ .category }}">{{ index $cat .category }}</span><br/>
   {{ end }}
-  {{ if isset . "url" }}
-    <a href="#">
+  {{ if isset . "anchor" }}
+    <a href="#{{ .anchor }}">
     {{ safeHTML .title }}
     {{ if isset . "speaker" }}
     <br/><span class="speaker">{{ .speaker }}</span>

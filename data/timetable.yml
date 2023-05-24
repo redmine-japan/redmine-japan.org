@@ -22,8 +22,10 @@ body:
       title: オープニングセッション
   - start: 10:25
     end: 11:15
+    time: time02
     events:
       id: A02
+      anchor: a02
       category: keynote
       title: 引継ぎから始まるスクラム
       speaker: 川口 恭伸
@@ -76,9 +78,11 @@ body:
         banner: ＜募集中＞
   - start: 16:00
     end: 16:50
+    time: time10
     events:
       id: A10
       category: keynote
+      anchor: a10
       title: 「そのDXは本当に必要なのか」〜御社にそのシステムは不要です〜
       speaker: 四宮 靖隆
       furigana: しのみや やすたか
