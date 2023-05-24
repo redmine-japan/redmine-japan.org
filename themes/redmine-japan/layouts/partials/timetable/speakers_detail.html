@@ -1,0 +1,30 @@
+{{- with .events }}
+  {{- if isset . "anchor" }}
+    {{- $photo   := $.speakers.Resources.GetMatch .photo }}
+    {{- $profile := $.speakers.Resources.GetMatch .profile }}
+    {{- $session := $.speakers.Resources.GetMatch .session }}
+<div id="{{ .anchor }}" class="container ">
+  <a class="back_timetable" href="#{{ $.time }}">タイムテーブルへ</a>
+  <div class="row sp_details text-center">
+    <div class="col-sm-12 col-md-10 mx-auto text-center">
+      <p class="lecture_top text-left">
+        <span class="{{ .category }}">{{ index $.category .category }}</span>{{ $.start }}〜{{ $.end }}
+      </p>
+      <h3 class="text-left">{{ safeHTML .title }}</h3>
+      <p class="text-left lecture_text">
+        {{ partial "strip_p_element" $session }}
+      </p>
+    </div>
+    <div class="col-xl-4 col-lg-3 col-md-10 col-sm-12 mx-auto text-center speaker">
+      <img class="rounded" alt="{{ .alt }}" src="{{ $photo.RelPermalink }}" width="{{ $photo.Width }}" height="{{ $photo.Height }}" data-holder-rendered="true" loading="lazy">
+    </div>
+    <div class="col-xl-6 col-lg-7 col-md-10 col-sm-12 mx-auto text-center speaker">
+      <h3 class="text-left">{{ .speaker }}</h3>
+      <p class="text-left speaker_text">
+        {{ partial "strip_p_element" $profile }}
+      </p>
+    </div>
+  </div>
+</div>
+  {{- end }}
+{{- end }}

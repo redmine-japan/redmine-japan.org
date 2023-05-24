@@ -1,4 +1,9 @@
 title: Redmine Japan Vol-3
+category:
+  keynote: 基調講演
+  invited: 招待講演
+  ops: 運用
+  case: 事例
 room:
   - title: メインホール
     class: rd
@@ -9,9 +14,6 @@ room:
   - title: 406号室
     class: yl
     width: 3
-categoriy:
-  keynote: 基調講演
-  invited: 招待講演
 body:
   - start: 9:30
     title: 開場

@@ -1,4 +1,4 @@
 ---
 title: タイムテーブル
+type: timetable
 ---
-{{< timetable>}}

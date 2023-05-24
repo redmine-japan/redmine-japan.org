@@ -1,0 +1,94 @@
+{{ $context := .context }}
+  <div class="row" {{ with .entry.time }} id="{{ . }}" {{ end }}>
+    <div class="col-lg-2 col-md-12 text-center table-border table-bg-gr">
+      <p class="lead m-md-1 table-fontsize-main">{{ .entry.start }} {{ with .entry.end }} ～ {{ . }} {{ end }}</p>
+    </div>
+
+{{ with .entry.events }}
+  {{ if isset . "id" }}
+    <div class="col-lg-10 col-md-12 text-left bg-white text-dark table-border table-mix">
+      {{ partial "event.html" (dict "event" . "context" $context) }}
+    </div>
+  {{ else }}
+    {{ range $room, $event := . }}
+      {{ if isset $event "id" }}
+        {{ partial "event_box.html" (dict "event" (partial "event.html" (dict "event" $event "context" $context)) "room" $room) }}
+      {{ end }}
+
+      {{ with $event.subevents }}
+        {{ partial "event_box.html" (dict "event" (partial "subevent.html" (dict "events" . "context" $context)) "room" $room) }}
+      {{ end }}
+
+      {{ with $event.note }}
+        <div class="col-lg-8 col-md-12 text-center table-bg-break text-dark table-border table-mix">
+          <p class="lead m-md-1 table-fontsize-main">{{ . }}</p>
+        </div>
+      {{ end }}
+
+      {{ if (or (and (isset $event "ditto") (eq $event.ditto "top")) (isset $event "narrow")) }}
+        {{ partial "note.html" $event }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ else }}
+  {{ with .note }}
+  <div class="col-lg-10 col-md-12 text-center bg-white text-dark table-border table-mixall">
+    <p class="lead m-md-1 table-fontsize-main">
+      {{ . }}
+    </p>
+  </div>
+  {{ else }}
+  <div class="col-lg-10 col-md-12 text-left bg-white text-dark table-border table-mix">
+    <p class="lead m-md-1 table-fontsize-main">
+      {{ .title }}<br />
+      {{ .speaker }}
+    </p>
+  </div>
+  {{ end }}
+{{ end }}
+  </div>
+
+{{ define "partials/event_box.html" }}
+  {{ $width := cond (eq .room "a") 4 3 }}
+  <div class="col-lg-{{$width}} col-md-12 text-left bg-white text-dark table-border">
+    {{ .event }}
+  </div>
+{{ end }}
+
+{{ define "partials/subevent.html" }}
+  {{ range .events }}
+    {{ partial "event.html" (dict "event" . "context" $.context) }}
+  {{ end }}
+{{ end }}
+
+{{ define "partials/event.html" }}
+  {{ $category := $.context.Site.Data.timetable.category }}
+  {{ with .event }}
+  <p class="lead m-md-1 table-fontsize-main">
+  {{ if isset . "category" }}
+  <span class="category {{ .category }}">{{ index $category .category }}</span><br/>
+  {{ end }}
+  {{ if isset . "anchor" }}
+    <a href="#{{ .anchor }}">
+    {{ safeHTML .title }}
+    {{ if isset . "speaker" }}
+    <br/><span class="speaker">{{ .speaker }}</span>
+    {{ end }}
+    </a>
+  {{ else }}
+    {{ safeHTML .title }}
+    {{ if isset . "speaker" }}
+    <br /><span class="speaker">{{ .speaker }}</span>
+    {{ end }}
+  {{ end }}
+  </p>
+  {{ end }}
+{{ end }}
+
+{{ define "partials/note.html" }}
+   {{ $border := cond (and (isset . "ditto") (eq .ditto "top")) "" "table-border" }}
+   {{ $border := cond (isset . "narrow") "table-border-top" $border}}
+   <div class="col-lg-3 col-md-12 text-center {{ $border }} bg-white table-bg-cr text-dark">
+     <p class="m-md-2">{{ .note }}{{ .banner }}</p>
+   </div>
+{{ end }}

@@ -1,0 +1,53 @@
+{{- define "main" }}
+<section>
+<div id="{{ .File.ContentBaseName }}" class="jumbotron">
+  <div class="container">
+    <div class="row first-row">
+      <div class="col-lg-12 mb-4 mt-2 text-center">
+        <h1>{{ .Title }}</h1>
+      </div>
+    </div>
+  </div>
+
+{{/* テーブルヘッダ */}}
+<div class="container table_topttl">
+  <div class="row">
+    <div class="col-lg-2 col-md-12 text-center table-border table-bg-gr">
+      <p class="m-md-2">TIME</p>
+    </div>
+    {{ range .Site.Data.timetable.room }}
+    <div class="col-lg-{{ .width }} col-md-12 text-center table-border table-bg-{{ .class}}">
+      <p class="m-md-2"><a href="" class="head" target="_target" rel="noopener noreferrer">{{ .title }}</a></p>
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+{{/* テーブル本体 */}}
+{{ $context := . }}
+{{ range .Site.Data.timetable.body }}
+<div class="container">
+  {{ partial "timetable/row" (dict "entry" . "context" $context) }}
+</div>
+{{ end }}
+</div>
+</section>
+{{/* 講演詳細 */}}
+<section>
+  <div id="speakers_details" class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mb-4 mt-2 text-center">
+          <h2 style="margin: 30px 0 0;">講演内容</h2>
+        </div>
+      </div>
+    </div>
+{{- $speakers := $.Site.GetPage "/speakers" }}
+{{- $category := $.Site.Data.timetable.category }}
+{{- range .Site.Data.timetable.body }}
+  {{- $current := merge . (dict "speakers" $speakers "category" $category) }}
+  {{ partial "timetable/speakers_detail" $current }}
+{{- end }}
+  </div>
+</section>
+{{- end }}
