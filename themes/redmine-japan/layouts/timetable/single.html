@@ -15,21 +15,21 @@
     <div class="col-lg-2 col-md-12 text-center table-border table-bg-gr">
       <p class="m-md-2">TIME</p>
     </div>
-    {{ range .Site.Data.timetable.room }}
+    {{- range .Site.Data.timetable.room }}
     <div class="col-lg-{{ .width }} col-md-12 text-center table-border table-bg-{{ .class}}">
       <p class="m-md-2"><a href="" class="head" target="_target" rel="noopener noreferrer">{{ .title }}</a></p>
     </div>
-    {{ end }}
+    {{- end }}
   </div>
 </div>
 
 {{/* テーブル本体 */}}
-{{ $context := . }}
-{{ range .Site.Data.timetable.body }}
+{{- $context := . }}
+{{- range .Site.Data.timetable.body }}
 <div class="container">
   {{ partial "timetable/row" (dict "entry" . "context" $context) }}
 </div>
-{{ end }}
+{{- end }}
 </div>
 </section>
 {{/* 講演詳細 */}}

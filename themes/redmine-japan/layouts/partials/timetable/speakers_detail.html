@@ -1,8 +1,8 @@
-{{- with .events }}
-  {{- if isset . "anchor" }}
-    {{- $photo   := $.speakers.Resources.GetMatch .photo }}
-    {{- $profile := $.speakers.Resources.GetMatch .profile }}
-    {{- $session := $.speakers.Resources.GetMatch .session }}
+{{- with .events -}}
+  {{- if isset . "anchor" -}}
+    {{- $photo   := $.speakers.Resources.GetMatch .photo -}}
+    {{- $profile := $.speakers.Resources.GetMatch .profile -}}
+    {{- $session := $.speakers.Resources.GetMatch .session -}}
 <div id="{{ .anchor }}" class="container ">
   <a class="back_timetable" href="#{{ $.time }}">タイムテーブルへ</a>
   <div class="row sp_details text-center">
@@ -26,5 +26,5 @@
     </div>
   </div>
 </div>
-  {{- end }}
-{{- end }}
+  {{- end -}}
+{{- end -}}
