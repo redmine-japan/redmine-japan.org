@@ -1,8 +1,8 @@
-  <div class="row" {{ with .entry.time }} id="{{ . }}" {{ end }}>
+  <div class="row" {{ with .time }} id="{{ . }}" {{ end }}>
     <div class="col-lg-2 col-md-12 text-center table-border table-bg-gr">
-      <p class="lead m-md-1 table-fontsize-main">{{ .entry.start }} {{ with .entry.end }} ～ {{ . }} {{ end }}</p>
+      <p class="lead m-md-1 table-fontsize-main">{{ .start }} {{ with .end }} ～ {{ . }} {{ end }}</p>
     </div>
-{{- with .entry.events -}}
+{{- with .events -}}
   {{- if isset . "id" -}}
     <div class="col-lg-10 col-md-12 text-left bg-white text-dark table-border table-mix">
       {{ partial "event.html" . }}

@@ -27,7 +27,8 @@
 {{- $context := . }}
 {{- range .Site.Data.timetable.body }}
 <div class="container">
-  {{ partial "timetable/row" (dict "entry" . "context" $context) }}
+  {{- $current := merge . (dict "context" $context) }}
+  {{ partial "timetable/row" $current }}
 </div>
 {{- end }}
 </div>
